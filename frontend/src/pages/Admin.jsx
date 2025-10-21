@@ -28,7 +28,8 @@ const Admin = () => {
     try {
       // Test credentials by making a request to an admin endpoint
       const authHeader = createAuthHeader(username, password);
-      const response = await fetch('/api/admin/stats', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
+      const response = await fetch(`${apiUrl}/admin/stats`, {
         headers: {
           'Authorization': authHeader
         }
