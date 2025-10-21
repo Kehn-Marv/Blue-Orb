@@ -47,4 +47,18 @@ router.post('/community/unflag/:eventId', communityCtrl.unflagContent);
 router.delete('/community/:eventId', communityCtrl.adminDeleteEvent);
 router.get('/community/stats', communityCtrl.getCommunityStats);
 
+// General admin stats endpoint for authentication testing
+router.get('/stats', async (req, res) => {
+  try {
+    const stats = {
+      message: 'Admin authentication successful',
+      timestamp: new Date().toISOString(),
+      status: 'authenticated'
+    };
+    res.json({ ok: true, data: stats });
+  } catch (err) {
+    res.status(500).json({ ok: false, error: 'Internal server error' });
+  }
+});
+
 module.exports = router;

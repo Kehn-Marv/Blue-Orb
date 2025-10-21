@@ -94,7 +94,7 @@ VITE_API_URL=https://your-backend-url.onrender.com/api
 ```
 
 ### 2.5 Update Frontend API Configuration
-You'll need to update your frontend to use the production API URL. In your frontend code, make sure API calls use `import.meta.env.VITE_API_URL` instead of hardcoded localhost.
+You'll need to update your frontend to use the production API URL. In your frontend code, make sure API calls use `import.meta.env.VITE_API_URL` instead of hardcoded localhost. (already added)
 
 ## 🔗 Step 3: Connect Frontend to Backend
 
